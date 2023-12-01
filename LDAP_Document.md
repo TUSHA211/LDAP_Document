@@ -417,16 +417,16 @@ vim custom_attribute.ldif
 ```
 
 ```
-dn: cn=schema  
-changetype: modify  
-add: attributeTypes  
-attributetypes: (emp_code-oid NAME  'EmployeeCode' DESC   'EmployeeCode' EQUALITY caseIgnoreMatch SUBSTR   caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10} SINGLE-VALUE X-ORIGIN 'user defined' )  
-attributetypes: (gender-oid NAME 'Gender' DESC 'Gender'   EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch   SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{8} SINGLE-VALUE   X-ORIGIN 'user defined')      
-attributetypes: (certifications-oid NAME 'Certifications' DESC 'Certifications' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10} X-ORIGIN 'user defined')  
-attributetypes: (passport-oid NAME 'PassportNo'  DESC   'PassportNo.' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10}  SINGLE-VALUE X-ORIGIN 'user defined')
-attributetypes: (pan_no-oid NAME 'Panno' DESC 'Panno.' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10}  SINGLE-VALUE X-ORIGIN 'user defined')  
-attributetypes: (qualification-oid NAME 'Qualification' DESC 'Qualification' EQUALITY caseIgnoreMatch  SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10} X-ORIGIN 'user defined')  
-attributetypes: (correspondence_address-oid  NAME 'CorrespondenceAddress' DESC 'CorrespondenceAddress' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{100} SINGLE-VALUE X-ORIGIN 'user defined')  
+dn: cn=schema
+changetype: modify
+add: attributeTypes
+attributetypes: (emp_code-oid NAME  'EmployeeCode' DESC 'EmployeeCode' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10} SINGLE-VALUE X-ORIGIN 'user defined' )
+attributetypes: (gender-oid NAME 'Gender' DESC 'Gender' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{8} SINGLE-VALUE X-ORIGIN 'user defined')
+attributetypes: (certifications-oid NAME 'Certifications' DESC 'Certifications' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10} X-ORIGIN 'user defined')
+attributetypes: (passport-oid NAME 'PassportNo'  DESC 'PassportNo.' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10}  SINGLE-VALUE X-ORIGIN 'user defined')
+attributetypes: (pan_no-oid NAME 'Panno' DESC 'Panno.' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10}  SINGLE-VALUE X-ORIGIN 'user defined')
+attributetypes: (qualification-oid NAME 'Qualification' DESC 'Qualification' EQUALITY caseIgnoreMatch  SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{10} X-ORIGIN 'user defined')
+attributetypes: (correspondence_address-oid  NAME 'CorrespondenceAddress' DESC 'CorrespondenceAddress' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{100} SINGLE-VALUE X-ORIGIN 'user defined')
 attributetypes: (personalemail-id-oid NAME 'personalemail-id' DESC 'personalemail-id' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{20} SINGLE-VALUE X-ORIGIN 'user defined')
 attributetypes: (facebookaccount-oid NAME 'facebookaccount' DESC 'facebookaccount' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{20} SINGLE-VALUE X-ORIGIN 'user defined')
 attributetypes: (twitteraccount-oid NAME 'twitteraccount' DESC 'twitteraccount' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{15} SINGLE-VALUE X-ORIGIN 'user defined')
@@ -445,19 +445,20 @@ attributetypes: (dob-oid NAME 'DateofBirth' DESC 'DateofBirth' EQUALITY caseIgno
 attributetypes: (passport_valid_upto-oid NAME 'PassportValidupto' DESC 'PassportValidupto' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{8} SINGLE-VALUE X-ORIGIN 'user defined')
 attributetypes: (ProfessionalStartYEARS-oid NAME 'ProfessionalStartYEARS' DESC 'ProfessionalStartYEARS' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{8} SINGLE-VALUE X-ORIGIN 'user defined')
 attributetypes: (YEARSOfExperience-oid NAME 'YEARSOfExperience' DESC 'YEARSOfExperience' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{8} SINGLE-VALUE X-ORIGIN 'user defined')
-attributetypes: (dateofjoiningasintern-oid NAME 'dateofjoiningasintern' DESC 'dateofjoiningasintern'  EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5SubstringsMatch  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{8} SINGLE-VALUE X-ORIGIN 'user defined')  
-attributetypes: (AadharNo-oid  NAME 'AadhaarNo' DESC 'AadhaarNo' EQUALITY integerMatch SUBSTR caseIgnoreIA5SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{20}  SINGLE-VALUE X-ORIGIN 'user defined')  
-attributetypes: (YearsofQualification NAME 'YearsofQualification' DESC 'YearsofQualification' EQUALITY integerMatch  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{10}  SINGLE-VALUE X-ORIGIN 'user defined')  
+attributetypes: (dateofjoiningasintern-oid NAME 'dateofjoiningasintern' DESC 'dateofjoiningasintern'  EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5SubstringsMatch  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{8} SINGLE-VALUE X-ORIGIN 'user defined')
+attributetypes: (AadharNo-oid  NAME 'AadhaarNo' DESC 'AadhaarNo' EQUALITY integerMatch SUBSTR caseIgnoreIA5SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{20}  SINGLE-VALUE X-ORIGIN 'user defined')
+attributetypes: (YearsofQualification NAME 'YearsofQualification' DESC 'YearsofQualification' EQUALITY integerMatch  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{10}  SINGLE-VALUE X-ORIGIN 'user defined')
 attributetypes: (mobileno-oid  NAME 'mobileno' DESC 'mobileno' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{20} X-ORIGIN 'user defined')
 attributetypes: (UANno-oid NAME 'UANno' DESC 'UANno' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{20}  SINGLE-VALUE X-ORIGIN 'user defined')
-attributetypes: (InsuranceMonthlyAmountDeductionINR-oid NAME 'InsuranceMonthlyAmountDeductionINR' DESC 'InsuranceMonthlyAmountDeductionINR'  EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{10}  SINGLE-VALUE X-ORIGIN 'user defined')  
+attributetypes: (InsuranceMonthlyAmountDeductionINR-oid NAME 'InsuranceMonthlyAmountDeductionINR' DESC 'InsuranceMonthlyAmountDeductionINR'  EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{10}  SINGLE-VALUE X-ORIGIN 'user defined')
 attributetypes: ( projectname-oid NAME 'ProjectName' DESC 'ProjectName' EQUALITY caseIgnoreMatch SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{50} SINGLE-VALUE X-ORIGIN 'user defined')
+
 ```
 
 B.Add this file to ldap db
 
 ```
-ldadadd -a -c -xH ldap://localhost:3389 -D "cn=Directory Manager" -W  -f custom_attribute.ldif
+ldapadd -a -c -xH ldap://localhost:3389 -D "cn=Directory Manager" -W -f custom_attribute.ldif
 ```
 
 ```
