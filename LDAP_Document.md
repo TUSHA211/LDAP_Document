@@ -2,7 +2,7 @@
 ## **Lightweight   Directory  Access  Protocol**
 
 
-
+ 
 
 ## Table of Content
 ********************
@@ -398,7 +398,7 @@ A.In this file we have gave objectclass name and must custom attribute
 B.After that add user to db
 
 ```
-ldapadd -a -c -xH ldap://localhost:3389 -D "cn=Directory Manager" -W  -f user1.ldif
+ldapadd -a -c -xH ldap://localhost:3389 -D "cn=Directory Manager" -W -f user1.ldif
 ```
 
 ```
@@ -510,6 +510,8 @@ result: 0 Success
 # numResponses: 2
 # numEntries: 1
 ```
+
+
 
  ### Apache Directory Studio
 
