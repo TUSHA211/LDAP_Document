@@ -178,147 +178,7 @@ Reading state information... Done
 ldap-utils is already the newest version (2.4.49+dfsg-2ubuntu1.9).
 ```
 
-
- ### Apache Directory Studio
-
-Apache Directory Studio is an open-source, cross-platform LDAP (Lightweight Directory Access Protocol) client and directory toolset. It is part of the Apache Directory  project and provides a graphical user interface for working with LDAP directories.
-
-#### 2. Setup ApacheDirectory studio 
-
-Create connection apache directory studio with openldap server 
-
-To install apache directory studio
-
-Click link below and download file
-
-
-https://directory.apache.org/studio/download/download-linux.html
-
-```
-cd Downloads/
-```
-**cd**: Stands for "change directory," and it is used to navigate the file system.
-
-**Downloads/**: Specifies the directory to which you want to change. The trailing slash / is used to indicate that "Download" is a directory.
-```
-tar -zxvf ApacheDirectoryStudio-2.0.0.v20210717-M17-linux.gtk.x86_64.tar.gz
-```
-**tar**: The command-line tool for handling tarball files, which are collections of files and directories bundled together. It's often used in conjunction with compression tools like gzip.
-
-**-z**: Specifies that the input file is compressed with gzip. -x: Stands for "extract," which tells tar to extract the contents. -v: Stands for "verbose," which displays detailed information about the extraction process. -f: Specifies the name of the archive file to be processed. ApacheDirectoryStudio-2.0.0.v20210717-M17-linux.gtk.x86_64.tar.gz: This is the name of the tarball file you are extracting.
-
-```
-sudo mv ApacheDirectoryStudio-* /opt/
-```
-**sudo**: Stands for "superuser do." It is used to execute the command with elevated privileges. You might need administrative rights to move files into the /opt/ directory.
-
-**mv**: Stands for "move." This command is used to move files or directories.
-
-**ApacheDirectoryStudio**-*: This is a wildcard pattern that matches any file or directory whose name starts with "ApacheDirectoryStudio-." The asterisk * is a wildcard character that represents any sequence of characters.
-
-**/opt/**: This is the target directory where the files will be moved. The /opt/ directory is commonly used for installing additional software on Unix-like systems.
-
-```
-sudo ln -s /opt/ApacheDirectoryStudio*/ApacheDirectoryStudio /usr/local/bin/ApacheDirectoryStudio
-```
-
-**sudo**: Executes the following command with elevated privileges.
-
-**ln**: Stands for "link" and is used to create links between files.
-
-**-s**: Specifies that a symbolic link should be created. Symbolic links are references to another file or directory.
-
-/opt/ApacheDirectoryStudio*/ApacheDirectoryStudio: The source directory or file. The wildcard * is used to match any version or timestamp in the file name. This points to the Apache Directory Studio executable.
-
-/usr/local/bin/ApacheDirectoryStudio: The destination of the symbolic link. This is the location where the symbolic link will be created.
-
-```
-sudo apt-get install openjdk-11-jre
-```
-**sudo**: Stands for "superuser do." It is used to execute the command with elevated privileges. You might be prompted to enter your password.
-
-**apt-get**: The package management command-line tool used on Debian-based systems.
-
-**install**: The install command for apt-get is used to install new packages.
-
-**openjdk-11-jre**: This is the name of the package you want to install. It represents the OpenJDK 11 Runtime Environment.
-
-```
-Output
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-openjdk-11-jre is already the newest version (11.0.20.1+1-0ubuntu1~22.04).
-openjdk-11-jre set to manually installed.
-The following packages were automatically installed and are no longer required:
-buildah containernetworking-plugins golang-github-containernetworking-plugin-dnsname golang-github-cont golang-github-containers-image libflashrom1 libftdi1-2 libllvm13 libllvm14 libostree-1-1
-Use 'sudo apt autoremove' to remove them.
-upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
-```
-```
-cd ApacheDirectoryStudio/
-```
-
-cd ApacheDirectoryStudio/: command is used to change the current working directory to the "ApacheDirectoryStudio" directory.
-
-```
-./ApacheDirectoryStudio
-```
-
-./: The dot-slash (./) is a shorthand notation indicating the current directory.
-
-**ApacheDirectoryStudio**: This is the name of the executable or script you are trying
-
-Now start your apache directory studio
-
-
-![](https://lh7-us.googleusercontent.com/Qj4UvFAWlrEPxCv3k5M3LfBFJZ7C0Az1JjgQjBqFIhPT8D7OLVrOyMExYNdWRaFG-1ryW9VtRaUlqbDtc_gTpgjU2uYgaSX4QUoRlZm1pYvNtl9omEU04gK4IUxV3NNE7ei8e7qgB_vuSzV5EQ_hsvo)
-
-
- * After opening of Apache directory studio
-
-
-
-
-![](https://lh7-us.googleusercontent.com/2Urj505_Cg3AH_y9UaW7y7LC91GjG03BuA-xY9V2DQekff08325PgSxzhpMppwZ6bcqzAyOaU5sEZ6p7PLnA_z7RxloXotMPjIjllBdreU7985_FKU1cxGIoOm5px5JlC1sAZATMslHVPlKR2EiMy_I)
-
-
-####  3. Go to new connection and enter some details-
-
-- LDAP  -> New Connection
-
-
-
-
-![](https://lh7-us.googleusercontent.com/ssric_ByyNgXumAoIkMt73J1wmEUC-TfOh721U7Wd3T95LmqyPXG9JJDv5Q28-4_KA2UL5LKMHgs7t2VHxw7SoZcyh75g6e1WteVZrqqdmjIepnqXcU0K8pX5I4FF9gFl7leIdp7sn1aDunXicS2wME)
-
-
- - Write Hostname 
- - ldap port> Press next 
-
-
-
-
-![](https://lh7-us.googleusercontent.com/DPMTN0zf5LZp_yZH2qwZiMQ_XPBORl6BGC2j1DWnnb-LvFPX8JCdrOIVxJzk9QIm-kYs8Hr95Adli_9qErzpA7-hRxpr_KL75Z8RW4UfFUzXYgu5VKUfWL2z0Hl1Mh_GfCAMrhiaj4xsyhCMvIMrTiw)
-
-
-
-
-- Enter Bind DN name (cn= Directory Manager) 
-- Enter Bind DN password -> finish
-
-
-
-![](https://lh7-us.googleusercontent.com/Lyx_c4QKSMQvTaLULS9fGFQ9AFYopmXQPYumlBLb5uhKiPmpIKXY60D-kPgit51SFrR22VdvIM_nqKkVYum6c1ZmGiM1d7h0Z-eBK7adWyIKGaJF439E_7u5gwNzajPDH3ZbJayOHa6636hv-BOSh84)
-
-
-
-
-**Then Bind our server**
-
-
-
-#### 4.Create Organization_unit ldif file (file extension name,ldif ) 
+#### 2.Create Organization_unit ldif file (file extension name,ldif ) 
 
 - we have create 5 organisation ( Dev, Support,SupportTm, Document, Observation)
 ```
@@ -376,7 +236,7 @@ adding new entry "ou=Observation,dc=keen,dc=in"
 ```
 
 
-### 5.Create 2 group inside Support 
+### 3.Create 2 group inside Support 
 ```
 vim group.ldif
 ```
@@ -410,7 +270,7 @@ adding new entry "cn=SupportTeam,ou=Support,dc=keen,dc=in"
 
 
 
-#### 6.Create Custom attribute according to our requirement
+#### 4.Create Custom attribute according to our requirement
 
 - Create customer attribute ldif file
 ```
@@ -472,7 +332,7 @@ modifying entry "cn=schema"
 
 
 
-#### 7.Create Object class file for add attribute to object class
+#### 5.Create Object class file for add attribute to object class
 ```
 vim object_class.ldif
 ```
@@ -498,13 +358,13 @@ modifying entry "cn=schema"
 
 ``````
 
-#### 8.Create user with custom attribute
+#### 6.Create user with custom attribute
 ```
 vim user1.ldif
 ```
 
 ```
-dn: uid=001,ou=dev,dc=keenable,dc=in
+dn: uid=001,ou=dev,dc=keen,dc=in
 objectClass: top
 objectClass: inetOrgPerson
 objectClass: customEmployee
@@ -513,7 +373,7 @@ sn: Gupta
 uid: 001
 EmployeeCode: 101
 userPassword: 12345@
-personal email-id: rahulgupta@yopmail.com
+personalemail-id: rahulgupta@yopmail.com
 mobileNo: 1213141500
 documentssubmitted: yes
 DateofJoining: 05-01-2022
@@ -550,7 +410,7 @@ adding new entry "uid=001,ou=dev,dc=keen,dc=in"
 ```
 
 
-#### 9.Check user reflected or not through ldapsearch command
+#### 7.Check user reflected or not through ldapsearch command
 
 ```
 ldapsearch -x -D "cn=Directory Manager" -W -H ldap://localhost:3389 -b "ou=dev,dc=keen,dc=in" -s sub "(uid=001)"
@@ -651,6 +511,142 @@ result: 0 Success
 # numEntries: 1
 ```
 
+ ### Apache Directory Studio
+
+Apache Directory Studio is an open-source, cross-platform LDAP (Lightweight Directory Access Protocol) client and directory toolset. It is part of the Apache Directory  project and provides a graphical user interface for working with LDAP directories.
+
+#### 8. Setup ApacheDirectory studio 
+
+Create connection apache directory studio with openldap server 
+
+To install apache directory studio
+
+Click link below and download file
+
+
+https://directory.apache.org/studio/download/download-linux.html
+
+```
+cd Downloads/
+```
+**cd**: Stands for "change directory," and it is used to navigate the file system.
+
+**Downloads/**: Specifies the directory to which you want to change. The trailing slash / is used to indicate that "Download" is a directory.
+```
+tar -zxvf ApacheDirectoryStudio-2.0.0.v20210717-M17-linux.gtk.x86_64.tar.gz
+```
+**tar**: The command-line tool for handling tarball files, which are collections of files and directories bundled together. It's often used in conjunction with compression tools like gzip.
+
+**-z**: Specifies that the input file is compressed with gzip. -x: Stands for "extract," which tells tar to extract the contents. -v: Stands for "verbose," which displays detailed information about the extraction process. -f: Specifies the name of the archive file to be processed. ApacheDirectoryStudio-2.0.0.v20210717-M17-linux.gtk.x86_64.tar.gz: This is the name of the tarball file you are extracting.
+
+```
+sudo mv ApacheDirectoryStudio-* /opt/
+```
+**sudo**: Stands for "superuser do." It is used to execute the command with elevated privileges. You might need administrative rights to move files into the /opt/ directory.
+
+**mv**: Stands for "move." This command is used to move files or directories.
+
+**ApacheDirectoryStudio**-*: This is a wildcard pattern that matches any file or directory whose name starts with "ApacheDirectoryStudio-." The asterisk * is a wildcard character that represents any sequence of characters.
+
+**/opt/**: This is the target directory where the files will be moved. The /opt/ directory is commonly used for installing additional software on Unix-like systems.
+
+```
+sudo ln -s /opt/ApacheDirectoryStudio*/ApacheDirectoryStudio /usr/local/bin/ApacheDirectoryStudio
+```
+
+**sudo**: Executes the following command with elevated privileges.
+
+**ln**: Stands for "link" and is used to create links between files.
+
+**-s**: Specifies that a symbolic link should be created. Symbolic links are references to another file or directory.
+
+/opt/ApacheDirectoryStudio*/ApacheDirectoryStudio: The source directory or file. The wildcard * is used to match any version or timestamp in the file name. This points to the Apache Directory Studio executable.
+
+/usr/local/bin/ApacheDirectoryStudio: The destination of the symbolic link. This is the location where the symbolic link will be created.
+
+```
+sudo apt-get install openjdk-11-jre
+```
+**sudo**: Stands for "superuser do." It is used to execute the command with elevated privileges. You might be prompted to enter your password.
+
+**apt-get**: The package management command-line tool used on Debian-based systems.
+
+**install**: The install command for apt-get is used to install new packages.
+
+**openjdk-11-jre**: This is the name of the package you want to install. It represents the OpenJDK 11 Runtime Environment.
+
+```
+Output
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+openjdk-11-jre is already the newest version (11.0.20.1+1-0ubuntu1~22.04).
+openjdk-11-jre set to manually installed.
+The following packages were automatically installed and are no longer required:
+buildah containernetworking-plugins golang-github-containernetworking-plugin-dnsname golang-github-cont golang-github-containers-image libflashrom1 libftdi1-2 libllvm13 libllvm14 libostree-1-1
+Use 'sudo apt autoremove' to remove them.
+upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
+```
+```
+cd ApacheDirectoryStudio/
+```
+
+cd ApacheDirectoryStudio/: command is used to change the current working directory to the "ApacheDirectoryStudio" directory.
+
+```
+./ApacheDirectoryStudio
+```
+
+./: The dot-slash (./) is a shorthand notation indicating the current directory.
+
+**ApacheDirectoryStudio**: This is the name of the executable or script you are trying
+
+Now start your apache directory studio
+
+
+![](https://lh7-us.googleusercontent.com/Qj4UvFAWlrEPxCv3k5M3LfBFJZ7C0Az1JjgQjBqFIhPT8D7OLVrOyMExYNdWRaFG-1ryW9VtRaUlqbDtc_gTpgjU2uYgaSX4QUoRlZm1pYvNtl9omEU04gK4IUxV3NNE7ei8e7qgB_vuSzV5EQ_hsvo)
+
+
+ * After opening of Apache directory studio
+
+
+
+
+![](https://lh7-us.googleusercontent.com/2Urj505_Cg3AH_y9UaW7y7LC91GjG03BuA-xY9V2DQekff08325PgSxzhpMppwZ6bcqzAyOaU5sEZ6p7PLnA_z7RxloXotMPjIjllBdreU7985_FKU1cxGIoOm5px5JlC1sAZATMslHVPlKR2EiMy_I)
+
+
+####  9. Go to new connection and enter some details-
+
+- LDAP  -> New Connection
+
+
+
+
+![](https://lh7-us.googleusercontent.com/ssric_ByyNgXumAoIkMt73J1wmEUC-TfOh721U7Wd3T95LmqyPXG9JJDv5Q28-4_KA2UL5LKMHgs7t2VHxw7SoZcyh75g6e1WteVZrqqdmjIepnqXcU0K8pX5I4FF9gFl7leIdp7sn1aDunXicS2wME)
+
+
+ - Write Hostname 
+ - ldap port> Press next 
+
+
+
+
+![](https://lh7-us.googleusercontent.com/DPMTN0zf5LZp_yZH2qwZiMQ_XPBORl6BGC2j1DWnnb-LvFPX8JCdrOIVxJzk9QIm-kYs8Hr95Adli_9qErzpA7-hRxpr_KL75Z8RW4UfFUzXYgu5VKUfWL2z0Hl1Mh_GfCAMrhiaj4xsyhCMvIMrTiw)
+
+
+
+
+- Enter Bind DN name (cn= Directory Manager) 
+- Enter Bind DN password -> finish
+
+
+
+![](https://lh7-us.googleusercontent.com/Lyx_c4QKSMQvTaLULS9fGFQ9AFYopmXQPYumlBLb5uhKiPmpIKXY60D-kPgit51SFrR22VdvIM_nqKkVYum6c1ZmGiM1d7h0Z-eBK7adWyIKGaJF439E_7u5gwNzajPDH3ZbJayOHa6636hv-BOSh84)
+
+
+
+
+**Then Bind our server**
 
 
 
