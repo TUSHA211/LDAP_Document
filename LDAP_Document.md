@@ -504,31 +504,32 @@ vim user1.ldif
 ```
 
 ```
-dn: uid=001,ou=dev,dc=keen,dc=in  
-objectClass: top  
-objectClass: inetOrgPerson   
-objectClass: customEmployee  
-cn: rahul  
-sn: Gupta  
-uid: 001  
-EmployeeCode: 101  
-userPassword: 12345@  
-personalemail-id: rahulgupta@yopmail.com  
-mobileNo: 1213141500  
-documentssubmitted: yes  
-DateofJoining: 05-01-2022  
-Gender: Male  
-DateofBirth: 06-01-1998  
-Panno: ABCDH7654P  
-Qualification: MCA  
-YearsofQualification: 2021  
-ProfessionalStartYEARS: 2022  
-YEARSOfExperience: 01  
-CorrespondenceAddress: Delhi  
-MaritalStatus: Single  
-BankName: PNB  
-AccountNo: 1100110011  
-IFSCCode: KKBK0053  
+dn: uid=001,ou=dev,dc=keenable,dc=in
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: customEmployee
+cn: rahul
+sn: Gupta
+uid: 001
+EmployeeCode: 101
+userPassword: 12345@
+personal email-id: rahulgupta@yopmail.com
+mobileNo: 1213141500
+documentssubmitted: yes
+DateofJoining: 05-01-2022
+Gender: Male
+DateofBirth: 06-01-1998
+Panno: ABCDH7654P
+Qualification: MCA
+YearsofQualification: 2021
+ProfessionalStartYEARS: 2022
+YEARSOfExperience: 01
+CorrespondenceAddress: Delhi
+MaritalStatus: Single
+BankName: PNB
+AccountNo: 1100110011
+IFSCCode: KKBK0053
+  
 ```
 
 A.In this file we have gave objectclass name and must custom attribute
