@@ -325,25 +325,26 @@ Now start your apache directory studio
 vim organisation.ldif
 ```
 ```
-dn: dc=keen,dc=in  
-objectClass: top  
-objectClass: organization  
-o:  keen  
+dn: dc=keen,dc=in
+objectClass: top
+objectClass: domain
+objectClass: organizationalUnit
+ou:  keen
 dc: keen
 
-dn: ou=Dev,dc=keen,dc=in  
-objectClass: top  
-objectClass: organizationalUnit  
+dn: ou=Dev,dc=keen,dc=in
+objectClass: top
+objectClass: organizationalUnit
 ou: Dev
 
-dn: ou=Support,dc=keen,dc=in  
-objectClass: top  
-objectClass: organizationalUnit  
+dn: ou=Support,dc=keen,dc=in
+objectClass: top
+objectClass: organizationalUnit
 ou: Support
 
-dn: ou=SupportTm,dc=keen,dc=in  
-objectClass: top    
-objectClass: organizationalUnit  
+dn: ou=SupportTm,dc=keen,dc=in
+objectClass: top
+objectClass: organizationalUnit
 ou: SupportTm
 
 dn: ou=Document,dc=keen,dc=in
@@ -351,9 +352,9 @@ objectClass: top
 objectClass: organizationalUnit
 ou: Document
 
-dn: ou=Observation,dc=keen,dc=in  
-objectClass: top  
-objectClass: organizationalUnit   
+dn: ou=Observation,dc=keen,dc=in
+objectClass: top
+objectClass: organizationalUnit
 ou: Observation
 ````
 
